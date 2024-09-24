@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secured Page - Top 100 Motorcycle Brands</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            font-size: 2.5rem;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .brand-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .brand-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .brand-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .brand-item h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .brand-item p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .logout {
+            display: block;
+            margin: 3rem auto 0;
+            text-align: center;
+            background-color: #ff4757;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout:hover {
+            background-color: #ff6b81;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Welcome</h2>
+        <p>the top 3 motorcycle brands ranked by turnover.</p>
+        
+        <ul class="brand-list">
+           
+            <li class="brand-item">
+                <h3>1. Harley-Davidson</h3>
+                <p>Turnover: $5 billion</p>
+            </li>
+            <li class="brand-item">
+                <h3>2. Honda</h3>
+                <p>Turnover: $4.5 billion</p>
+            </li>
+            <li class="brand-item">
+                <h3>3. Yamaha</h3>
+                <p>Turnover: $3.8 billion</p>
+            </li>
+            <!-- Add remaining brands here -->
+        </ul>
+
+        <a href="{% url 'logout' %}" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+</body>
+
+</html>
